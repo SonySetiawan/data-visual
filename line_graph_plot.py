@@ -1,9 +1,14 @@
 import matplotlib.pyplot as plt
+import numpy as np
 
-x = [1,2,3,4]
-y = [10,20,30,40]
+x = np.linspace(0,10,10)
 
-plt.plot(x,y,'r')
+plt.plot(x, x**2, '--r', label="square")
+plt.plot(x, x**3, 'b', label="cube")
+
+plt.xlim(0,10)
+plt.ylim(0,1000)
+plt.legend()
 
 plt.title("Basic Line Graph")
 plt.xlabel("x axis")
